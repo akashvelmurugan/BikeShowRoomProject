@@ -1,9 +1,9 @@
 package com.bikesowroom;
 
 import java.io.*;
-public class SearchDetailsByCustomerName {
+public class AllCoustomerDetails {
 	public static void allCustomerDetails() throws IOException { 
-		File file= new File("D:\\ShowRoom\\ShowRoom.txt");
+		File file= new File(FileLocation.location());
 		FileReader fileReader = new FileReader(file);
 		BufferedReader bufferedReader= new BufferedReader(fileReader);
 		StringBuffer buffer=new StringBuffer();

@@ -1,7 +1,9 @@
 package com.bikesowroom;
 
-public class SearchByBikeNumber {
-	public static void searchByBikeNumber() {
+public class SearchByBikeNumber extends FileLocation{
+	public static void searchByMobileNumber(){
+		
+		
 		
 	}
 }
