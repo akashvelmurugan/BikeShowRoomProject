@@ -5,23 +5,26 @@ import java.util.*;
 public class MainClass {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		Scanner  scanner= new Scanner(System.in);
-		String intro="\bWeLCoME To YAMAHA ShOwRoOm OnLiNe\n";
+		String intro="WeLCoME To YAMAHA ShOwRoOm OnLiNe\n";
 		BikeModelAndMyProduct myProduct= new BikeModelAndMyProduct();
 		for (int i = 0; i < intro.length(); i++) {
 			System.out.print(intro.charAt(i));
 			Thread.sleep(100);
 		}
+
 		while (true) { 		
 			System.out.println("                 **********HOME PAGE**********");
 			System.out.println("BOOK NOW '1' :");
 			System.out.println("ALL CUSTOMER DETAILS '2':");
 			System.out.println("SEARCH DETAILS BY CUSTOMER MOBILE NUMBER '3' :");
 			System.out.println("MY PRODUCTS ENTER '4'");
+			System.out.println("FEEDBACK '5' :");
 			System.out.println("Exit ENTER '0'");
 
 			String stringValue = scanner.nextLine();
 
 			switch (stringValue) {
+			
 			case "1":
 				Registration registration= new Registration();
 				FileWriter fileWriter = new FileWriter(FileLocation.location(),true);
@@ -30,7 +33,7 @@ public class MainClass {
 				printWriter.println(registration.toString());
 				printWriter.close();
 				break;	
-
+				
 			case "2":
 				AllCoustomerDetails.allCustomerDetails();
 				break;
@@ -42,6 +45,9 @@ public class MainClass {
 			case "4":
 				myProduct.bikeModel();
 				break;
+			case "5":
+			FeedBack.customerFeedBack();	
+				break;	
 			
 			case "0":
 				scanner.close();

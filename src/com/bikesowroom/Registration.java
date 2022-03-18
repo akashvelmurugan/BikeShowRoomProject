@@ -97,7 +97,9 @@ public class Registration {
 		}
 		
 		System.out.println("Enter Bike Number (ALL CAPS):");
-		this.bikeNumber = scanner.next();
+		 String number= scanner.next();
+		String upperCase = number.toUpperCase();
+		this.bikeNumber=upperCase; 
 		System.out.println(bikeNumber);
 		System.out.println("****REGISTRATION SUCCESSFULLY****");
 	}
