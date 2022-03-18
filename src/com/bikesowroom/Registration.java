@@ -6,7 +6,7 @@ public class Registration {
 	String coutomerName;
 	String mobile;
 	String coutomerAge;
-	String bikeModel="";
+	String bikeModel;
 	String bikeNumber;
 	public Registration() throws InterruptedException {
 		Scanner scanner= new Scanner(System.in);

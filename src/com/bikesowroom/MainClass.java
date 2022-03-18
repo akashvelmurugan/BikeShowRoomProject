@@ -5,7 +5,7 @@ import java.util.*;
 public class MainClass {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		Scanner  scanner= new Scanner(System.in);
-		String intro="WeLCoME To YAMAHA ShOwRoOm OnLiNe\n";
+		String intro="WeLCoME To TaMiLnAdU ShOwRoOm OnLiNe\n";
 		BikeModelAndMyProduct myProduct= new BikeModelAndMyProduct();
 		for (int i = 0; i < intro.length(); i++) {
 			System.out.print(intro.charAt(i));
@@ -18,7 +18,7 @@ public class MainClass {
 			System.out.println("ALL CUSTOMER DETAILS '2':");
 			System.out.println("SEARCH DETAILS BY CUSTOMER MOBILE NUMBER '3' :");
 			System.out.println("MY PRODUCTS ENTER '4'");
-			System.out.println("FEEDBACK '5' :");
+			System.out.println("Service Information'5' :");
 			System.out.println("Exit ENTER '0'");
 
 			String stringValue = scanner.nextLine();
@@ -35,8 +35,19 @@ public class MainClass {
 				break;	
 				
 			case "2":
+			boolean condition=true;
+			while(condition=true) {
+				System.out.println("Enter Your Password :");
+				String password=scanner.next();
+				if(password.equals("password")) {
 				AllCoustomerDetails.allCustomerDetails();
-				break;
+				//condition=false;
+				}else {
+					System.out.println("You Entered Wrong Password !!!!!!!");
+				}
+			
+				}
+			break;
 
 			case "3":
 				SearchDetailsByMobileNumber.searchByMobileNumber();		
@@ -46,7 +57,7 @@ public class MainClass {
 				myProduct.bikeModel();
 				break;
 			case "5":
-			FeedBack.customerFeedBack();	
+			ServiceAndInfo.customerFeedBack();	
 				break;	
 			
 			case "0":

@@ -4,20 +4,30 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.util.Scanner;
 
-public class FeedBack {
+import org.omg.CORBA.Current;
+
+public class ServiceAndInfo {
 	public static void customerFeedBack() throws IOException{
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Enter Your Feed Back :");
-		String  feedBack= scanner.nextLine();
+		System.out.println("Enter Your BikeNuber :");
+		String  bikeNumber= scanner.nextLine();
+		String upperCase = bikeNumber.toUpperCase();
+		System.out.println("Enter Your Enter Your Mobile Number:");
+		String mobileNumber = bikeNumber.toUpperCase();
+		long currentTimeMillis = System.currentTimeMillis();
+		Date date= new Date(currentTimeMillis);
+		System.out.println(date);
+		
 		System.out.println("Thang For You FeedBack");
 		FileWriter fileWriter = new FileWriter("D:\\ShowRoom\\FeedBack.txt",true);
 		BufferedWriter bufferedWriter=new BufferedWriter(fileWriter);
 		PrintWriter printWriter= new PrintWriter(bufferedWriter);
-		printWriter.println(feedBack);
+		printWriter.println(upperCase+" "+mobileNumber+" "+date);
 		printWriter.close();
 	
 	}
