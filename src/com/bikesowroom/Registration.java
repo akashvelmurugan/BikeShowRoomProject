@@ -3,16 +3,16 @@ package com.bikesowroom;
 import java.util.Scanner;
 
 public class Registration {
-	String coutomerName;
+	String customerName;
 	String mobile;
-	String coutomerAge;
+	String customerAge;
 	String bikeModel;
 	String bikeNumber;
 	public Registration() throws InterruptedException {
 		Scanner scanner= new Scanner(System.in);
-		System.out.println("Enter Coustomer Name :");
-		this.coutomerName = scanner.nextLine();
-		System.out.println(coutomerName);
+		System.out.println("Enter Customer Name :");
+		this.customerName = scanner.nextLine();
+		System.out.println(customerName);
 		boolean b=true;
 		while(b) {
 			System.out.println("Enter Customer Mobile Number :");
@@ -27,8 +27,8 @@ public class Registration {
 			}
 		}
 		System.out.println("Enter The Coustomer Age");
-		this.coutomerAge = scanner.nextLine();
-		System.out.println(coutomerAge);
+		this.customerAge = scanner.nextLine();
+		System.out.println(customerAge);
 
 		boolean condition=true;
 		while(condition) {
@@ -104,6 +104,6 @@ public class Registration {
 		System.out.println("****REGISTRATION SUCCESSFULLY****");
 	}
 	public String toString() {
-		return coutomerName+" "+mobile +" "+coutomerAge+" "+bikeModel+" "+bikeNumber;
+		return customerName+" "+mobile +" "+customerAge+" "+bikeModel+" "+bikeNumber;
 	}
 }

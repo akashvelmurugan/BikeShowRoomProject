@@ -15,10 +15,11 @@ public class ServiceAndInfo {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Enter Your BikeNuber :");
-		String  bikeNumber= scanner.nextLine();
+		String  bikeNumber= scanner.next();
 		String upperCase = bikeNumber.toUpperCase();
+		
 		System.out.println("Enter Your Enter Your Mobile Number:");
-		String mobileNumber = bikeNumber.toUpperCase();
+		String mobileNumber = scanner.next();
 		long currentTimeMillis = System.currentTimeMillis();
 		Date date= new Date(currentTimeMillis);
 		System.out.println(date);

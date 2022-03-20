@@ -5,13 +5,13 @@ import java.util.*;
 public class MainClass {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		Scanner  scanner= new Scanner(System.in);
-		String intro="WeLCoME To TaMiLnAdU ShOwRoOm OnLiNe\n";
+		String intro="Welcome to Tamilnadu Yamaha Bike ShowRoom Online\n";
 		BikeModelAndMyProduct myProduct= new BikeModelAndMyProduct();
 		for (int i = 0; i < intro.length(); i++) {
-			System.out.print(intro.charAt(i));
-			Thread.sleep(100);
+			System.err.print(intro.charAt(i));
+			Thread.sleep(80);
 		}
-
+		
 		while (true) { 		
 			System.out.println("                 **********HOME PAGE**********");
 			System.out.println("BOOK NOW '1' :");
@@ -20,12 +20,15 @@ public class MainClass {
 			System.out.println("MY PRODUCTS ENTER '4'");
 			System.out.println("Service Information'5' :");
 			System.out.println("Exit ENTER '0'");
-
-			String stringValue = scanner.nextLine();
-
+			
+					
+			String stringValue = scanner.next();
+			
+			
 			switch (stringValue) {
 			
 			case "1":
+				
 				Registration registration= new Registration();
 				FileWriter fileWriter = new FileWriter(FileLocation.location(),true);
 				BufferedWriter bufferedWriter=new BufferedWriter(fileWriter);
@@ -36,12 +39,12 @@ public class MainClass {
 				
 			case "2":
 			boolean condition=true;
-			while(condition=true) {
+			while(condition) {
 				System.out.println("Enter Your Password :");
 				String password=scanner.next();
 				if(password.equals("password")) {
 				AllCoustomerDetails.allCustomerDetails();
-				//condition=false;
+				condition=false;
 				}else {
 					System.out.println("You Entered Wrong Password !!!!!!!");
 				}
