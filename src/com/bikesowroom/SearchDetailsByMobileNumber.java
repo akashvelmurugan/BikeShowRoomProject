@@ -18,7 +18,7 @@ public class SearchDetailsByMobileNumber {
 		for(int i=0;i<lines;i++){
 			line = bf.readLine();
 			String[] array=line.split(",");
-			System.out.println(line);
+			//System.out.println(line);
 			if(array[1].equals(mobileNumber))
 			{
 				flag=true;
