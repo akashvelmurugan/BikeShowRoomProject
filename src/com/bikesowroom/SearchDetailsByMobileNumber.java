@@ -1,6 +1,6 @@
 package com.bikesowroom;
 import java.io.*;
-import java.util.Scanner;;
+import java.util.Scanner;
 
 public class SearchDetailsByMobileNumber {
 	static Scanner scanner= new java.util.Scanner(System.in);
@@ -17,8 +17,9 @@ public class SearchDetailsByMobileNumber {
 		int lines=countingLines();
 		for(int i=0;i<lines;i++){
 			line = bf.readLine();
-			String[] array=line.split(" ");
-			if(array[1].equalsIgnoreCase(mobileNumber))
+			String[] array=line.split(",");
+			System.out.println(line);
+			if(array[1].equals(mobileNumber))
 			{
 				flag=true;
 				displayDetails(array);
@@ -36,7 +37,6 @@ public class SearchDetailsByMobileNumber {
 		System.out.println("Your Customer Age      : "+array[2]);
 		System.out.println("Your Bike Model        : "+array[3]);
 		System.out.println("Your Bike Number       : "+array[4]);
-
 	}
 	public static int countingLines() throws IOException {
 		int count=0;
@@ -50,4 +50,3 @@ public class SearchDetailsByMobileNumber {
 		return count;
 	}
 }
-

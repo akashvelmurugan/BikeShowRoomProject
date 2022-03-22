@@ -8,21 +8,20 @@ public class Registration {
 	String customerAge;
 	String bikeModel;
 	String bikeNumber;
-	public Registration() throws InterruptedException {
+	public void registor() throws InterruptedException {
 		Scanner scanner= new Scanner(System.in);
 		System.out.println("Enter Customer Name :");
 		this.customerName = scanner.nextLine();
 		System.out.println(customerName);
-		boolean b=true;
-		while(b) {
+
+		while(true) {
 			System.out.println("Enter Customer Mobile Number :");
 			String mobile = scanner.nextLine();
 			if(mobile.length()==10) {
 				this.mobile=mobile;
 				System.out.println(mobile);
-				b=false;			
+				break;			
 			}else {
-				b=true;
 				System.out.println("YOU ENTERD INVALID NUMBER PLEASE REENTER VALID NUMBER");
 			}
 		}
@@ -30,80 +29,70 @@ public class Registration {
 		this.customerAge = scanner.nextLine();
 		System.out.println(customerAge);
 
-		boolean condition=true;
-		while(condition) {
+
+		outer: while(true) {
 			System.out.println("Enter Your Option\n-> 1 R15M(B)\n-> 2 R15 V4\n-> 3 MotoGB Edition\n-> 4 R15S\n-> 5 R15\n-> 6 MT-15\n-> 7 FZS 25\n-> 8 FZ 25\n-> 9 FZ-X\n-> 10 FZ-S F1\n-> 11 FZ-F1");	
 			String productModel = scanner.next();
 			switch (productModel) {
 			case "1":
 				bikeModel="R15M(B)";
 				System.out.println("R15M(B)");
-				condition=false;
-				break;
+				break outer;
 			case "2":
 				this.bikeModel="R15 V4";	
 				System.out.println("R15 V4");
-				condition=false;
-				break;
+				break outer;
 			case "3":
 				this.bikeModel="MotoGB Edition";	
 				System.out.println("MotoGB Edition");
-				condition=false;
-				break;
+				break outer;
 			case "4":
 				this.bikeModel="R15S";
 				System.out.println("R15S");
-				condition=false;
-				break;
+				break outer;
 			case "5":
 				this.bikeModel="R15";
 				System.out.println("R15");
-				condition=false;
-				break;
+				break outer;
 			case "6":
 				this.bikeModel="MT-15";
 				System.out.println("MT-15");
-				condition=false;
-				break;
+				break outer;
 			case "7":
 				this.bikeModel="FZS 25";
 				System.out.println("FZS 25");
-				condition=false;
-				break;
+				break outer;
 			case "8":
 				this.bikeModel="FZ 25";
 				System.out.println("FZ 25");
-				condition=false;
-				break;
+				break outer;
 			case "9":
 				this.bikeModel="FZ-X";
 				System.out.println("FZ-X");
-				condition=false;
-				break;
+				break outer;
 			case "10":
 				this.bikeModel="FZ-S F1";
 				System.out.println("FZ-S F1");
-				condition=false;
-				break;
+				break outer;
 			case "11":
 				this.bikeModel="FZ-F1";
 				System.out.println("FZ-F1");
-				condition=false;
-				break;
+				break outer;
 			default:
 				System.out.println("Invalid Selection \nPlease Enter Correct Option");
 				break;
 			}
 		}
-		
+
 		System.out.println("Enter Bike Number (ALL CAPS):");
-		 String number= scanner.next();
+		String number= scanner.next();
 		String upperCase = number.toUpperCase();
 		this.bikeNumber=upperCase; 
 		System.out.println(bikeNumber);
 		System.out.println("****REGISTRATION SUCCESSFULLY****");
 	}
+
 	public String toString() {
-		return customerName+" "+mobile +" "+customerAge+" "+bikeModel+" "+bikeNumber;
+		return customerName+","+mobile +","+customerAge+","+bikeModel+","+bikeNumber;
 	}
 }
