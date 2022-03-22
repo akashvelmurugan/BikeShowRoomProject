@@ -11,9 +11,10 @@ public class MainClass {
 			System.err.print(intro.charAt(i));
 			Thread.sleep(80);
 		}
+		boolean shouldContinue = true;
 
-		while (true) { 		
-			System.out.println("             **********HOME PAGE**********");
+		while (shouldContinue) { 		
+			System.out.println("        **********HOME PAGE**********");
 			System.out.println("BOOK NOW '1' :");
 			System.out.println("ALL CUSTOMER DETAILS '2':");
 			System.out.println("SEARCH DETAILS BY CUSTOMER MOBILE NUMBER '3' :");
@@ -66,7 +67,8 @@ public class MainClass {
 			case "0":
 				scanner.close();
 				Exit.exit();
-				System.exit(0);
+				//System.exit(0);
+				shouldContinue=false;
 				break;
 
 			default:

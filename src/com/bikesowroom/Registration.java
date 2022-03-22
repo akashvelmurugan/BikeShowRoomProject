@@ -8,6 +8,7 @@ public class Registration {
 	String customerAge;
 	String bikeModel;
 	String bikeNumber;
+	
 	public void registor() throws InterruptedException {
 		Scanner scanner= new Scanner(System.in);
 		System.out.println("Enter Customer Name :");
