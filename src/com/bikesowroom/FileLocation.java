@@ -1,7 +1,7 @@
 package com.bikesowroom;
 
 public class FileLocation {
-	static String location() {
-	  return "D:\\ShowRoom\\ShowRoom.txt";
+	static public  String location() {
+	  return "D:\\Serialization\\CustomerDetails.txt";
 	}
 }

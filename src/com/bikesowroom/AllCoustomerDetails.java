@@ -1,18 +1,28 @@
 package com.bikesowroom;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 public class AllCoustomerDetails {
-	public static void allCustomerDetails() throws IOException { 
-		File file= new File(FileLocation.location());
-		FileReader fileReader = new FileReader(file);
-		BufferedReader bufferedReader= new BufferedReader(fileReader);
-		StringBuffer buffer=new StringBuffer();
-		String line;
-		while ((line=bufferedReader.readLine())!=null) {
-			buffer.append(line);
-			buffer.append("\n");
+	Scanner scanner = new Scanner(System.in);
+	public void passWordVerfication() throws ClassNotFoundException, IOException{
+		while(true) {
+			System.out.println("Enter Your Password :");
+			String password=scanner.next();
+			if(password.equals("password")) {
+				allCustomerDetails();
+				break;
+			}else {
+				System.out.println("You Entered Wrong Password !!!!!!!");
+			}
 		}
-		fileReader.close();
-		System.out.println(buffer.toString());
+	}
+	public static void allCustomerDetails() throws IOException, ClassNotFoundException { 
+		
+		FileInputStream fileInputStream = new FileInputStream(FileLocation.location());
+		ObjectInputStream inputStream = new ObjectInputStream(fileInputStream);
+		ArrayList<Registration> arrayList = (ArrayList<Registration>) inputStream.readObject();
+		System.out.println(arrayList.toString());	
+
 	}
 }
