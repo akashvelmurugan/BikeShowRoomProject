@@ -7,8 +7,6 @@ import java.io.PrintWriter;
 import java.sql.Date;
 import java.util.Scanner;
 
-import org.omg.CORBA.Current;
-
 public class ServiceAndInfo {
 	public static void customerFeedBack() throws IOException{
 		

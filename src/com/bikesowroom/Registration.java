@@ -1,5 +1,9 @@
 package com.bikesowroom;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Registration {
@@ -8,8 +12,8 @@ public class Registration {
 	String customerAge;
 	String bikeModel;
 	String bikeNumber;
-	
-	public void registor() throws InterruptedException {
+
+	public void registor() throws InterruptedException, IOException {
 		Scanner scanner= new Scanner(System.in);
 		System.out.println("Enter Customer Name :");
 		this.customerName = scanner.nextLine();
@@ -96,4 +100,5 @@ public class Registration {
 	public String toString() {
 		return customerName+","+mobile +","+customerAge+","+bikeModel+","+bikeNumber;
 	}
+
 }
